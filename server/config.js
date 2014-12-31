@@ -1,0 +1,1 @@
+process.env.MAIL_URL = "smtp://adesh%40fashionunited.com:"+encodeURIComponent('aadi?123')+"@smtp.gmail.com:465";

@@ -1,0 +1,35 @@
+<template name="newBook">
+    <div class="container">
+        <div class="row">
+            <form id="new-book-form" class="new-book-form" enctype="multipart/form-data" >
+                <legend>List a Book</legend>
+                {{{getErrors}}}
+                <fieldset>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" name="price" id="price" />
+                    </div>
+                    <div class="form-group">
+                        <label for="image" class="checkbox-inline">
+                            <input type="radio" name="sale_rent" value="sale"/> on Sale
+                        </label>
+                        <label for="image" class="checkbox-inline">
+                            <input type="radio" name="sale_rent" value="rent"/> for Rent
+                        </label>                        
+                    </div>                    
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-info" />        
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</template>

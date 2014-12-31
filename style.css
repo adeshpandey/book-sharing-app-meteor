@@ -1,0 +1,8 @@
+/* CSS declarations go here */
+body{
+    padding-top:100px;
+}
+#login-form,#register-form,#forgot-form,#change-password-form{
+    width:550px;
+    margin:auto;
+}

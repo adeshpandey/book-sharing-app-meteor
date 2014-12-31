@@ -1,0 +1,41 @@
+<template name="job">
+    <div class="container">
+        <div class="row">
+            <form class="form-horizontal" id="job-post-from">
+                <div class="form-group">
+                    <label for="title">
+                        Job Title
+                    </label>
+                    <input type="text" name="title" class="form-control required" id="title" />
+                </div>
+                <div class="form-group">
+                    <label for="title">
+                        Job Location
+                    </label>
+                    <input type="text" name="location" class="form-control required" id="location" />
+                </div>     
+                <div class="form-group">
+                    <label for="jobType" class="radio-inline" >
+                        <input type="radio" name="jobType" value="onsite"/> Onsite
+                    </label>
+                    <label for="jobType" class="radio-inline" >
+                        <input type="radio" name="jobType" value="offsite" checked/> Offsite
+                    </label>                    
+                </div>     
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" name="price" class="form-control required" id="price" />
+                </div>
+                <div class="form-group">
+                    <label for="description">
+                        Job Description
+                    </label>
+                    <textarea name="description" class="form-control required" id="description" ></textarea>
+                </div>        
+                <div class="form-group" >
+                    <input type="submit" value="Submit" class="btn btn-info" id="post-job" />
+                </div>
+            </form>            
+        </div>
+    </div>
+</template>

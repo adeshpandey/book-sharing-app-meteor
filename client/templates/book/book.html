@@ -1,0 +1,59 @@
+<template name="book">
+    <div class="container">
+        <div>
+            <h3 class="page-header">
+                <div class="pull-right">
+                    <a href="#" class="btn btn-primary" id="buy-book-btn">Buy This?</a>
+                </div>
+                <div>{{title}} <small><i class="fa fa-usd"></i> {{price}}</small></div>
+            </h3>
+            <div>{{description}}</div>            
+        </div>
+        <div>
+            <h3>Comments</h3>
+            <hr/>
+            
+            {{#each comments}}
+            {{> commentItem}}
+            {{else}}
+            <div class="alert alert-warning">no comments yet.</div>
+                
+            {{/each}}
+        </div>
+        {{#if notOwner postedBy}}
+        {{> commentForm}}
+        {{/if}}
+    </div>
+    {{#if buyOpened}}
+    {{> buy}}
+    {{/if}}
+</template>
+<template name="buy">
+    <div style="position:fixed;top:200px;right:0;width:300px;" class="well">
+       <div>
+           <form name="order-book">
+               <a href="#" id="hidebox" class="pull-right"><i class="fa fa-remove"></i></a>
+               <legend>Enter Your Details</legend> 
+               {{{getErrors}}}
+                <fieldset>
+                    <div class="form-group">
+                        <label for="mobile">
+                            Mobile
+                        </label>
+                        <input type="text" name="mobile" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="address">
+                            Address
+                        </label>
+                        <input type="text" name="address" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" id="buy-btn">Buy</button>
+                    </div>
+                    
+                </fieldset>
+           </form>
+       </div>
+    </div>
+</template>
