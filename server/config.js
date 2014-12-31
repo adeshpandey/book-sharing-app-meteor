@@ -1,1 +1,1 @@
-process.env.MAIL_URL = "smtp://adesh%40fashionunited.com:"+encodeURIComponent('aadi?123')+"@smtp.gmail.com:465";
+process.env.MAIL_URL = "smtp://<EMAIL_ID>:"+encodeURIComponent('<PASSWORD>')+"@<EMAIL_HOST:EMAIL_PORT>";
